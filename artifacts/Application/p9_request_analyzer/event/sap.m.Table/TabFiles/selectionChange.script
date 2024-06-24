@@ -12,5 +12,6 @@ if (selectedItem) {
 
     apiGetRequestLog(options).then(function (res) {
         modelTabTopUrl.setData(res.topUrlList);
+        modelPageAnalyze.setData(res.requestInfo);
     });
 }

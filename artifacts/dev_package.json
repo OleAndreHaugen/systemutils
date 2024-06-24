@@ -15,8 +15,8 @@
 		{
 			"id": "ea26bf8c-97b9-45ca-86a6-71c412d112df",
 			"application": "p9_request_analyzer",
-			"title": "",
-			"description": "",
+			"title": "Request Analyzer",
+			"description": "Request Analyzer",
 			"package": {
 				"id": "a4df8373-bf95-4b48-8693-b6ffe1119596"
 			}
