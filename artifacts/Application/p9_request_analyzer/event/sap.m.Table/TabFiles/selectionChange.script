@@ -1,0 +1,16 @@
+const selectedItem = this.getSelectedItem();
+
+if (selectedItem) {
+    const context = selectedItem.getBindingContext();
+    const data = context.getObject();
+
+    const options = {
+        parameters: {
+            fileName: data.name,
+        },
+    };
+
+    apiGetRequestLog(options).then(function (res) {
+        modelTabTopUrl.setData(res.topUrlList);
+    });
+}
