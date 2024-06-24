@@ -21,6 +21,10 @@ try {
             log = JSON.parse(element);
         } catch (e) {}
 
+        if (req.query.pathing === "without") {
+            log.message.request.url = log.message.request.url.split("?")[0];
+        }
+
         const path = log.message.request.host + log.message.request.url;
 
         if (!topUrl[path])
@@ -64,7 +68,7 @@ try {
             reqOK,
             reqNOK,
             totReq,
-            totDuration,
+            totDuration: totDuration / 1000,
         },
     };
 } catch (e) {
@@ -72,7 +76,6 @@ try {
         error: e,
     };
 
-    // console.log(result.data);
 }
 
 complete();

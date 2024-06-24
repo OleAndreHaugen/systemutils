@@ -367,7 +367,7 @@
 																		{
 																			"attribute": "scale",
 																			"grouping": "Properties",
-																			"value": "Duration",
+																			"value": "Sec",
 																			"script": "",
 																			"translation": []
 																		},
@@ -497,6 +497,100 @@
 																	"fieldName": "ToolTopUrlSpacer",
 																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
 																	"fieldType": "sap.m.ToolbarSpacer",
+																	"script": "",
+																	"customComponent": false,
+																	"request": [],
+																	"response": [],
+																	"attributes": [],
+																	"data": []
+																},
+																{
+																	"fieldNo": "6feb2d2a-c145-475f-8055-318667ae5a74",
+																	"fieldName": "ToolTopUrlPath",
+																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
+																	"fieldType": "sap.m.SegmentedButton",
+																	"script": "",
+																	"customComponent": false,
+																	"request": [],
+																	"response": [],
+																	"attributes": [
+																		{
+																			"attribute": "selectionChange",
+																			"grouping": "Events",
+																			"value": "TabFiles.fireSelectionChange();",
+																			"script": "TabFiles.fireSelectionChange();",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "selectedKey",
+																			"grouping": "Properties",
+																			"value": "with",
+																			"script": "",
+																			"translation": []
+																		}
+																	],
+																	"data": [
+																		{
+																			"fieldNo": "54490d0c-7521-4990-e66a-8d14b4d7799a",
+																			"fieldName": "ToolTopUrlPathWith",
+																			"fieldParent": "6feb2d2a-c145-475f-8055-318667ae5a74",
+																			"fieldType": "sap.m.SegmentedButtonItem",
+																			"script": "",
+																			"customComponent": false,
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "All",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "key",
+																					"grouping": "Properties",
+																					"value": "with",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		},
+																		{
+																			"fieldNo": "0eb49003-4201-4234-a1a6-75727ffcda20",
+																			"fieldName": "ToolTopUrlPathNone",
+																			"fieldParent": "6feb2d2a-c145-475f-8055-318667ae5a74",
+																			"fieldType": "sap.m.SegmentedButtonItem",
+																			"script": "",
+																			"customComponent": false,
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "No Parameters",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "key",
+																					"grouping": "Properties",
+																					"value": "without",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		}
+																	]
+																},
+																{
+																	"fieldNo": "3ad94e33-32b3-4012-e16f-21cf9c1ec946",
+																	"fieldName": "ToolbarSeparator5",
+																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
+																	"fieldType": "sap.m.ToolbarSeparator",
 																	"script": "",
 																	"customComponent": false,
 																	"request": [],
@@ -755,7 +849,7 @@
 																	],
 																	"data": [
 																		{
-																			"fieldNo": "62020760-17be-4033-d1fd-bd039551ab19",
+																			"fieldNo": "a91db372-35a3-41a8-a919-fd46003ded8b",
 																			"fieldName": "txtTabTopUrlduration",
 																			"fieldParent": "bfe2d54c-8b6b-42bf-81e5-efad0f8b248c",
 																			"fieldType": "sap.m.Text",
@@ -768,6 +862,13 @@
 																					"attribute": "text",
 																					"grouping": "Properties",
 																					"value": "{duration}",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "text",
+																					"grouping": "Formatter",
+																					"value": "number:Decimals2Comma",
 																					"script": "",
 																					"translation": []
 																				}
@@ -972,7 +1073,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "24.06.24.1324",
+	"ver": "24.06.24.1432",
 	"application": "p9_request_analyzer",
 	"title": "Request Analyzer",
 	"description": "Request Analyzer",
