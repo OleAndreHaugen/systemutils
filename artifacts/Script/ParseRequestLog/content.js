@@ -62,6 +62,10 @@ try {
         });
     }
 
+    topUrlList?.forEach(function(item){
+        item.avg = item.duration / item.requests;
+    })
+
     result.data = {
         topUrlList: topUrlList,
         requestInfo: {

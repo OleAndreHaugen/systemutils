@@ -244,7 +244,7 @@
 													"attributes": [],
 													"data": [
 														{
-															"fieldNo": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
+															"fieldNo": "90219875-7a7b-4d5e-d80b-310c88c02995",
 															"fieldName": "ToolTopUrl",
 															"fieldParent": "edba133f-7a03-47ef-c21a-5cacb128d3bd",
 															"fieldType": "sap.m.Toolbar",
@@ -254,25 +254,25 @@
 															"response": [],
 															"attributes": [
 																{
-																	"attribute": "position",
-																	"grouping": "Parent",
-																	"value": "HeaderToolbar",
+																	"attribute": "height",
+																	"grouping": "Properties",
+																	"value": "80px",
 																	"script": "",
 																	"translation": []
 																},
 																{
-																	"attribute": "height",
-																	"grouping": "Properties",
-																	"value": "80px",
+																	"attribute": "position",
+																	"grouping": "Parent",
+																	"value": "HeaderToolbar",
 																	"script": "",
 																	"translation": []
 																}
 															],
 															"data": [
 																{
-																	"fieldNo": "6f60fb3d-a842-4084-a98a-59eba3a71c0a",
+																	"fieldNo": "31095e25-ddcb-4a8a-df7d-64a837b99d74",
 																	"fieldName": "ToolTopUrlFilter",
-																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
+																	"fieldParent": "90219875-7a7b-4d5e-d80b-310c88c02995",
 																	"fieldType": "sap.m.SearchField",
 																	"script": "",
 																	"customComponent": false,
@@ -280,26 +280,26 @@
 																	"response": [],
 																	"attributes": [
 																		{
-																			"attribute": "liveChange",
-																			"grouping": "Events",
-																			"value": "Anonymous Function",
-																			"script": "file://event/sap.m.SearchField/ToolTopUrlFilter/liveChange.script",
-																			"translation": []
-																		},
-																		{
 																			"attribute": "width",
 																			"grouping": "Properties",
 																			"value": "300px",
 																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "liveChange",
+																			"grouping": "Events",
+																			"value": "Anonymous Function",
+																			"script": "file://event/sap.m.SearchField/ToolTopUrlFilter/liveChange.script",
 																			"translation": []
 																		}
 																	],
 																	"data": []
 																},
 																{
-																	"fieldNo": "45dbfc10-d388-4c55-970f-9dfd7fdaf161",
+																	"fieldNo": "1a71b081-8631-45ca-d606-b409b71f69e3",
 																	"fieldName": "ToolbarSeparator",
-																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
+																	"fieldParent": "90219875-7a7b-4d5e-d80b-310c88c02995",
 																	"fieldType": "sap.m.ToolbarSeparator",
 																	"script": "",
 																	"customComponent": false,
@@ -309,29 +309,15 @@
 																	"data": []
 																},
 																{
-																	"fieldNo": "6096e6ca-9886-4ae1-c3e1-3d7443bdb92a",
+																	"fieldNo": "c7fe8d79-f6d5-4ffd-cb23-378d481e1d02",
 																	"fieldName": "NumTotReq",
-																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
+																	"fieldParent": "90219875-7a7b-4d5e-d80b-310c88c02995",
 																	"fieldType": "sap.m.ObjectNumber",
 																	"script": "",
 																	"customComponent": false,
 																	"request": [],
 																	"response": [],
 																	"attributes": [
-																		{
-																			"attribute": "number",
-																			"grouping": "Properties",
-																			"value": "{/totReq}",
-																			"script": "",
-																			"translation": []
-																		},
-																		{
-																			"attribute": "state",
-																			"grouping": "Properties",
-																			"value": "Success",
-																			"script": "",
-																			"translation": []
-																		},
 																		{
 																			"attribute": "unit",
 																			"grouping": "Properties",
@@ -345,38 +331,6 @@
 																			"value": "sapMObjectNumberLarge",
 																			"script": "",
 																			"translation": []
-																		}
-																	],
-																	"data": []
-																},
-																{
-																	"fieldNo": "44334e57-2896-4d6d-fcad-f3908fb3a27b",
-																	"fieldName": "ToolbarSeparator1",
-																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
-																	"fieldType": "sap.m.ToolbarSeparator",
-																	"script": "",
-																	"customComponent": false,
-																	"request": [],
-																	"response": [],
-																	"attributes": [],
-																	"data": []
-																},
-																{
-																	"fieldNo": "b72d7a8d-3bea-4981-b50f-18703539c657",
-																	"fieldName": "NumTotDuration",
-																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
-																	"fieldType": "sap.m.ObjectNumber",
-																	"script": "",
-																	"customComponent": false,
-																	"request": [],
-																	"response": [],
-																	"attributes": [
-																		{
-																			"attribute": "number",
-																			"grouping": "Properties",
-																			"value": "{/totDuration}",
-																			"script": "",
-																			"translation": []
 																		},
 																		{
 																			"attribute": "state",
@@ -386,9 +340,48 @@
 																			"translation": []
 																		},
 																		{
+																			"attribute": "number",
+																			"grouping": "Properties",
+																			"value": "{/totReq}",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "number",
+																			"grouping": "Formatter",
+																			"value": "number:Decimals0",
+																			"script": "",
+																			"translation": []
+																		}
+																	],
+																	"data": []
+																},
+																{
+																	"fieldNo": "0f75dac8-2b4b-484b-c683-3c8423c4709f",
+																	"fieldName": "ToolbarSeparator1",
+																	"fieldParent": "90219875-7a7b-4d5e-d80b-310c88c02995",
+																	"fieldType": "sap.m.ToolbarSeparator",
+																	"script": "",
+																	"customComponent": false,
+																	"request": [],
+																	"response": [],
+																	"attributes": [],
+																	"data": []
+																},
+																{
+																	"fieldNo": "1132fbb3-6bb8-4dc8-ffc7-57e6adc9378e",
+																	"fieldName": "NumTotDuration",
+																	"fieldParent": "90219875-7a7b-4d5e-d80b-310c88c02995",
+																	"fieldType": "sap.m.ObjectNumber",
+																	"script": "",
+																	"customComponent": false,
+																	"request": [],
+																	"response": [],
+																	"attributes": [
+																		{
 																			"attribute": "unit",
 																			"grouping": "Properties",
-																			"value": "Total Duration",
+																			"value": "Duration in Sec",
 																			"script": "",
 																			"translation": []
 																		},
@@ -398,14 +391,35 @@
 																			"value": "sapMObjectNumberLarge",
 																			"script": "",
 																			"translation": []
+																		},
+																		{
+																			"attribute": "state",
+																			"grouping": "Properties",
+																			"value": "Success",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "number",
+																			"grouping": "Properties",
+																			"value": "{/totDuration}",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "number",
+																			"grouping": "Formatter",
+																			"value": "number:Decimals2Comma",
+																			"script": "",
+																			"translation": []
 																		}
 																	],
 																	"data": []
 																},
 																{
-																	"fieldNo": "afa5a24c-0554-4e4b-d1d7-9ce8efa07157",
+																	"fieldNo": "534a6f84-1690-46a0-812c-b469ac1ddf56",
 																	"fieldName": "ToolbarSeparator2",
-																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
+																	"fieldParent": "90219875-7a7b-4d5e-d80b-310c88c02995",
 																	"fieldType": "sap.m.ToolbarSeparator",
 																	"script": "",
 																	"customComponent": false,
@@ -415,29 +429,15 @@
 																	"data": []
 																},
 																{
-																	"fieldNo": "a5bde1f7-a0ef-4e99-c927-b91946505a1e",
+																	"fieldNo": "b3a9cc0a-3aca-42d3-b0a8-f40833c72873",
 																	"fieldName": "NumOK",
-																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
+																	"fieldParent": "90219875-7a7b-4d5e-d80b-310c88c02995",
 																	"fieldType": "sap.m.ObjectNumber",
 																	"script": "",
 																	"customComponent": false,
 																	"request": [],
 																	"response": [],
 																	"attributes": [
-																		{
-																			"attribute": "number",
-																			"grouping": "Properties",
-																			"value": "{/reqOK}",
-																			"script": "",
-																			"translation": []
-																		},
-																		{
-																			"attribute": "state",
-																			"grouping": "Properties",
-																			"value": "Success",
-																			"script": "",
-																			"translation": []
-																		},
 																		{
 																			"attribute": "unit",
 																			"grouping": "Properties",
@@ -451,14 +451,35 @@
 																			"value": "sapMObjectNumberLarge",
 																			"script": "",
 																			"translation": []
+																		},
+																		{
+																			"attribute": "state",
+																			"grouping": "Properties",
+																			"value": "Success",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "number",
+																			"grouping": "Properties",
+																			"value": "{/reqOK}",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "number",
+																			"grouping": "Formatter",
+																			"value": "number:Decimals0",
+																			"script": "",
+																			"translation": []
 																		}
 																	],
 																	"data": []
 																},
 																{
-																	"fieldNo": "25bc2062-74ab-4675-f1b3-c4e86b45a892",
+																	"fieldNo": "d1bb1fed-8cf2-44ad-bce8-fade105edcdd",
 																	"fieldName": "ToolbarSeparator3",
-																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
+																	"fieldParent": "90219875-7a7b-4d5e-d80b-310c88c02995",
 																	"fieldType": "sap.m.ToolbarSeparator",
 																	"script": "",
 																	"customComponent": false,
@@ -468,29 +489,15 @@
 																	"data": []
 																},
 																{
-																	"fieldNo": "03cf26b7-1609-4aa7-f2b2-a533bcc61bb6",
+																	"fieldNo": "6e7ea592-5070-442c-cbb4-8840f5118f09",
 																	"fieldName": "NumNOK",
-																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
+																	"fieldParent": "90219875-7a7b-4d5e-d80b-310c88c02995",
 																	"fieldType": "sap.m.ObjectNumber",
 																	"script": "",
 																	"customComponent": false,
 																	"request": [],
 																	"response": [],
 																	"attributes": [
-																		{
-																			"attribute": "number",
-																			"grouping": "Properties",
-																			"value": "{/reqNOK}",
-																			"script": "",
-																			"translation": []
-																		},
-																		{
-																			"attribute": "state",
-																			"grouping": "Properties",
-																			"value": "Error",
-																			"script": "",
-																			"translation": []
-																		},
 																		{
 																			"attribute": "unit",
 																			"grouping": "Properties",
@@ -504,14 +511,35 @@
 																			"value": "sapMObjectNumberLarge",
 																			"script": "",
 																			"translation": []
+																		},
+																		{
+																			"attribute": "state",
+																			"grouping": "Properties",
+																			"value": "Error",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "number",
+																			"grouping": "Properties",
+																			"value": "{/reqNOK}",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "number",
+																			"grouping": "Formatter",
+																			"value": "number:Decimals0",
+																			"script": "",
+																			"translation": []
 																		}
 																	],
 																	"data": []
 																},
 																{
-																	"fieldNo": "85a6f509-9697-4e79-b93f-c9bbd316a48c",
+																	"fieldNo": "1fb0a33f-e6a1-40cc-a996-d92b621bb229",
 																	"fieldName": "ToolbarSeparator4",
-																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
+																	"fieldParent": "90219875-7a7b-4d5e-d80b-310c88c02995",
 																	"fieldType": "sap.m.ToolbarSeparator",
 																	"script": "",
 																	"customComponent": false,
@@ -521,9 +549,9 @@
 																	"data": []
 																},
 																{
-																	"fieldNo": "649be6a0-d9d0-427c-b963-b57e89d69a31",
+																	"fieldNo": "c00427ec-5bc6-4778-df8d-b154386bd1c8",
 																	"fieldName": "ToolTopUrlSpacer",
-																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
+																	"fieldParent": "90219875-7a7b-4d5e-d80b-310c88c02995",
 																	"fieldType": "sap.m.ToolbarSpacer",
 																	"script": "",
 																	"customComponent": false,
@@ -533,9 +561,9 @@
 																	"data": []
 																},
 																{
-																	"fieldNo": "6feb2d2a-c145-475f-8055-318667ae5a74",
+																	"fieldNo": "01ee374f-a7f6-416b-f343-69966a8557ab",
 																	"fieldName": "ToolTopUrlPath",
-																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
+																	"fieldParent": "90219875-7a7b-4d5e-d80b-310c88c02995",
 																	"fieldType": "sap.m.SegmentedButton",
 																	"script": "",
 																	"customComponent": false,
@@ -543,25 +571,25 @@
 																	"response": [],
 																	"attributes": [
 																		{
-																			"attribute": "selectionChange",
-																			"grouping": "Events",
-																			"value": "TabFiles.fireSelectionChange();",
-																			"script": "TabFiles.fireSelectionChange();",
-																			"translation": []
-																		},
-																		{
 																			"attribute": "selectedKey",
 																			"grouping": "Properties",
 																			"value": "with",
 																			"script": "",
 																			"translation": []
+																		},
+																		{
+																			"attribute": "selectionChange",
+																			"grouping": "Events",
+																			"value": "TabFiles.fireSelectionChange();",
+																			"script": "TabFiles.fireSelectionChange();",
+																			"translation": []
 																		}
 																	],
 																	"data": [
 																		{
-																			"fieldNo": "54490d0c-7521-4990-e66a-8d14b4d7799a",
+																			"fieldNo": "52a11c7d-56b8-43a3-ca7a-45ce6ed6d72d",
 																			"fieldName": "ToolTopUrlPathWith",
-																			"fieldParent": "6feb2d2a-c145-475f-8055-318667ae5a74",
+																			"fieldParent": "01ee374f-a7f6-416b-f343-69966a8557ab",
 																			"fieldType": "sap.m.SegmentedButtonItem",
 																			"script": "",
 																			"customComponent": false,
@@ -586,9 +614,9 @@
 																			"data": []
 																		},
 																		{
-																			"fieldNo": "0eb49003-4201-4234-a1a6-75727ffcda20",
+																			"fieldNo": "ae2fbc3e-c34f-40de-e53a-2a116a1cd02f",
 																			"fieldName": "ToolTopUrlPathNone",
-																			"fieldParent": "6feb2d2a-c145-475f-8055-318667ae5a74",
+																			"fieldParent": "01ee374f-a7f6-416b-f343-69966a8557ab",
 																			"fieldType": "sap.m.SegmentedButtonItem",
 																			"script": "",
 																			"customComponent": false,
@@ -615,9 +643,9 @@
 																	]
 																},
 																{
-																	"fieldNo": "3ad94e33-32b3-4012-e16f-21cf9c1ec946",
+																	"fieldNo": "5746f104-5d43-4f07-b3f9-9d89ad852b86",
 																	"fieldName": "ToolbarSeparator5",
-																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
+																	"fieldParent": "90219875-7a7b-4d5e-d80b-310c88c02995",
 																	"fieldType": "sap.m.ToolbarSeparator",
 																	"script": "",
 																	"customComponent": false,
@@ -627,9 +655,9 @@
 																	"data": []
 																},
 																{
-																	"fieldNo": "205e32db-2d93-48e1-a132-e319bd045c0b",
+																	"fieldNo": "fad93cf0-7a8f-4140-b596-6aaa7ecee3f1",
 																	"fieldName": "ToolTopUrlUpdate",
-																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
+																	"fieldParent": "90219875-7a7b-4d5e-d80b-310c88c02995",
 																	"fieldType": "sap.m.Button",
 																	"script": "",
 																	"customComponent": false,
@@ -637,10 +665,10 @@
 																	"response": [],
 																	"attributes": [
 																		{
-																			"attribute": "press",
-																			"grouping": "Events",
-																			"value": "TabFiles.fireSelectionChange();",
-																			"script": "TabFiles.fireSelectionChange();",
+																			"attribute": "type",
+																			"grouping": "Properties",
+																			"value": "Emphasized",
+																			"script": "",
 																			"translation": []
 																		},
 																		{
@@ -651,10 +679,10 @@
 																			"translation": []
 																		},
 																		{
-																			"attribute": "type",
-																			"grouping": "Properties",
-																			"value": "Emphasized",
-																			"script": "",
+																			"attribute": "press",
+																			"grouping": "Events",
+																			"value": "TabFiles.fireSelectionChange();",
+																			"script": "TabFiles.fireSelectionChange();",
 																			"translation": []
 																		}
 																	],
@@ -906,6 +934,75 @@
 																	]
 																},
 																{
+																	"fieldNo": "33175317-f8a6-4089-bbd5-c58599fe6b20",
+																	"fieldName": "colTabTopUrlavg",
+																	"fieldParent": "aa4b4e5b-ec60-4d61-afa7-31010f538981",
+																	"fieldType": "sap.ui.table.Column",
+																	"script": "",
+																	"customComponent": false,
+																	"request": [],
+																	"response": [],
+																	"attributes": [
+																		{
+																			"attribute": "width",
+																			"grouping": "Properties",
+																			"value": "200px",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "sortProperty",
+																			"grouping": "Properties",
+																			"value": "avg",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "label",
+																			"grouping": "Properties",
+																			"value": "Average in ms",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "hAlign",
+																			"grouping": "Properties",
+																			"value": "End",
+																			"script": "",
+																			"translation": []
+																		}
+																	],
+																	"data": [
+																		{
+																			"fieldNo": "9829a9e0-e1ea-48a0-da40-a050a05d9ad6",
+																			"fieldName": "txtTabTopUrlavg",
+																			"fieldParent": "33175317-f8a6-4089-bbd5-c58599fe6b20",
+																			"fieldType": "sap.m.Text",
+																			"script": "",
+																			"customComponent": false,
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "{avg}",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "text",
+																					"grouping": "Formatter",
+																					"value": "number:Decimals2Comma",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		}
+																	]
+																},
+																{
 																	"fieldNo": "b9b118ca-10fb-4c1b-a5b6-3dc83727492c",
 																	"fieldName": "colTabTopUrlerrors",
 																	"fieldParent": "aa4b4e5b-ec60-4d61-afa7-31010f538981",
@@ -1101,7 +1198,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "24.06.24.1442",
+	"ver": "24.06.24.1448",
 	"application": "p9_request_analyzer",
 	"title": "Request Analyzer",
 	"description": "Request Analyzer",
