@@ -68,7 +68,7 @@ try {
             reqOK,
             reqNOK,
             totReq,
-            totDuration: totDuration / 1000,
+            totDuration: (totDuration / 1000).toFixed(2),
         },
     };
 } catch (e) {

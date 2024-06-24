@@ -309,33 +309,40 @@
 																	"data": []
 																},
 																{
-																	"fieldNo": "ba9f71c7-2dd1-4123-d20a-91a2a8ab7c18",
+																	"fieldNo": "6096e6ca-9886-4ae1-c3e1-3d7443bdb92a",
 																	"fieldName": "NumTotReq",
 																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
-																	"fieldType": "sap.m.NumericContent",
+																	"fieldType": "sap.m.ObjectNumber",
 																	"script": "",
 																	"customComponent": false,
 																	"request": [],
 																	"response": [],
 																	"attributes": [
 																		{
-																			"attribute": "scale",
-																			"grouping": "Properties",
-																			"value": "Req",
-																			"script": "",
-																			"translation": []
-																		},
-																		{
-																			"attribute": "value",
+																			"attribute": "number",
 																			"grouping": "Properties",
 																			"value": "{/totReq}",
 																			"script": "",
 																			"translation": []
 																		},
 																		{
-																			"attribute": "valueColor",
+																			"attribute": "state",
 																			"grouping": "Properties",
-																			"value": "Good",
+																			"value": "Success",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "unit",
+																			"grouping": "Properties",
+																			"value": "Total Requests",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "styleClass",
+																			"grouping": "Properties",
+																			"value": "sapMObjectNumberLarge",
 																			"script": "",
 																			"translation": []
 																		}
@@ -355,33 +362,40 @@
 																	"data": []
 																},
 																{
-																	"fieldNo": "bf39e376-75f4-4d3c-a126-cbdd0487cfb5",
+																	"fieldNo": "b72d7a8d-3bea-4981-b50f-18703539c657",
 																	"fieldName": "NumTotDuration",
 																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
-																	"fieldType": "sap.m.NumericContent",
+																	"fieldType": "sap.m.ObjectNumber",
 																	"script": "",
 																	"customComponent": false,
 																	"request": [],
 																	"response": [],
 																	"attributes": [
 																		{
-																			"attribute": "scale",
-																			"grouping": "Properties",
-																			"value": "Sec",
-																			"script": "",
-																			"translation": []
-																		},
-																		{
-																			"attribute": "value",
+																			"attribute": "number",
 																			"grouping": "Properties",
 																			"value": "{/totDuration}",
 																			"script": "",
 																			"translation": []
 																		},
 																		{
-																			"attribute": "valueColor",
+																			"attribute": "state",
 																			"grouping": "Properties",
-																			"value": "Good",
+																			"value": "Success",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "unit",
+																			"grouping": "Properties",
+																			"value": "Total Duration",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "styleClass",
+																			"grouping": "Properties",
+																			"value": "sapMObjectNumberLarge",
 																			"script": "",
 																			"translation": []
 																		}
@@ -401,33 +415,40 @@
 																	"data": []
 																},
 																{
-																	"fieldNo": "cbe4af12-bce6-4c40-caab-2785a43d56c1",
+																	"fieldNo": "a5bde1f7-a0ef-4e99-c927-b91946505a1e",
 																	"fieldName": "NumOK",
 																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
-																	"fieldType": "sap.m.NumericContent",
+																	"fieldType": "sap.m.ObjectNumber",
 																	"script": "",
 																	"customComponent": false,
 																	"request": [],
 																	"response": [],
 																	"attributes": [
 																		{
-																			"attribute": "scale",
-																			"grouping": "Properties",
-																			"value": "OK",
-																			"script": "",
-																			"translation": []
-																		},
-																		{
-																			"attribute": "value",
+																			"attribute": "number",
 																			"grouping": "Properties",
 																			"value": "{/reqOK}",
 																			"script": "",
 																			"translation": []
 																		},
 																		{
-																			"attribute": "valueColor",
+																			"attribute": "state",
 																			"grouping": "Properties",
-																			"value": "Good",
+																			"value": "Success",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "unit",
+																			"grouping": "Properties",
+																			"value": "Requests OK",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "styleClass",
+																			"grouping": "Properties",
+																			"value": "sapMObjectNumberLarge",
 																			"script": "",
 																			"translation": []
 																		}
@@ -447,33 +468,40 @@
 																	"data": []
 																},
 																{
-																	"fieldNo": "1373d2b6-9a33-4158-8064-49a36978eaf0",
+																	"fieldNo": "03cf26b7-1609-4aa7-f2b2-a533bcc61bb6",
 																	"fieldName": "NumNOK",
 																	"fieldParent": "cd834608-0bb0-4cd7-a479-0ebfd451bf2e",
-																	"fieldType": "sap.m.NumericContent",
+																	"fieldType": "sap.m.ObjectNumber",
 																	"script": "",
 																	"customComponent": false,
 																	"request": [],
 																	"response": [],
 																	"attributes": [
 																		{
-																			"attribute": "scale",
-																			"grouping": "Properties",
-																			"value": "NOK",
-																			"script": "",
-																			"translation": []
-																		},
-																		{
-																			"attribute": "value",
+																			"attribute": "number",
 																			"grouping": "Properties",
 																			"value": "{/reqNOK}",
 																			"script": "",
 																			"translation": []
 																		},
 																		{
-																			"attribute": "valueColor",
+																			"attribute": "state",
 																			"grouping": "Properties",
 																			"value": "Error",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "unit",
+																			"grouping": "Properties",
+																			"value": "Errors",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "styleClass",
+																			"grouping": "Properties",
+																			"value": "sapMObjectNumberLarge",
 																			"script": "",
 																			"translation": []
 																		}
@@ -1073,7 +1101,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "24.06.24.1432",
+	"ver": "24.06.24.1442",
 	"application": "p9_request_analyzer",
 	"title": "Request Analyzer",
 	"description": "Request Analyzer",
