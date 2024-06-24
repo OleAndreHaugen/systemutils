@@ -40,6 +40,13 @@
 							"value": "false",
 							"script": "",
 							"translation": []
+						},
+						{
+							"attribute": "busyIndicatorDelay",
+							"grouping": "Properties",
+							"value": "200",
+							"script": "",
+							"translation": []
 						}
 					],
 					"data": [
@@ -395,7 +402,7 @@
 																		{
 																			"attribute": "state",
 																			"grouping": "Properties",
-																			"value": "Success",
+																			"value": "Information",
 																			"script": "",
 																			"translation": []
 																		},
@@ -419,66 +426,6 @@
 																{
 																	"fieldNo": "534a6f84-1690-46a0-812c-b469ac1ddf56",
 																	"fieldName": "ToolbarSeparator2",
-																	"fieldParent": "90219875-7a7b-4d5e-d80b-310c88c02995",
-																	"fieldType": "sap.m.ToolbarSeparator",
-																	"script": "",
-																	"customComponent": false,
-																	"request": [],
-																	"response": [],
-																	"attributes": [],
-																	"data": []
-																},
-																{
-																	"fieldNo": "b3a9cc0a-3aca-42d3-b0a8-f40833c72873",
-																	"fieldName": "NumOK",
-																	"fieldParent": "90219875-7a7b-4d5e-d80b-310c88c02995",
-																	"fieldType": "sap.m.ObjectNumber",
-																	"script": "",
-																	"customComponent": false,
-																	"request": [],
-																	"response": [],
-																	"attributes": [
-																		{
-																			"attribute": "unit",
-																			"grouping": "Properties",
-																			"value": "Requests OK",
-																			"script": "",
-																			"translation": []
-																		},
-																		{
-																			"attribute": "styleClass",
-																			"grouping": "Properties",
-																			"value": "sapMObjectNumberLarge",
-																			"script": "",
-																			"translation": []
-																		},
-																		{
-																			"attribute": "state",
-																			"grouping": "Properties",
-																			"value": "Success",
-																			"script": "",
-																			"translation": []
-																		},
-																		{
-																			"attribute": "number",
-																			"grouping": "Properties",
-																			"value": "{/reqOK}",
-																			"script": "",
-																			"translation": []
-																		},
-																		{
-																			"attribute": "number",
-																			"grouping": "Formatter",
-																			"value": "number:Decimals0",
-																			"script": "",
-																			"translation": []
-																		}
-																	],
-																	"data": []
-																},
-																{
-																	"fieldNo": "d1bb1fed-8cf2-44ad-bce8-fade105edcdd",
-																	"fieldName": "ToolbarSeparator3",
 																	"fieldParent": "90219875-7a7b-4d5e-d80b-310c88c02995",
 																	"fieldType": "sap.m.ToolbarSeparator",
 																	"script": "",
@@ -553,6 +500,208 @@
 																	"fieldName": "ToolTopUrlSpacer",
 																	"fieldParent": "90219875-7a7b-4d5e-d80b-310c88c02995",
 																	"fieldType": "sap.m.ToolbarSpacer",
+																	"script": "",
+																	"customComponent": false,
+																	"request": [],
+																	"response": [],
+																	"attributes": [],
+																	"data": []
+																},
+																{
+																	"fieldNo": "d996563b-5cfd-4a60-b6e7-f3983d72de6a",
+																	"fieldName": "ToolTopUrlFilterTime",
+																	"fieldParent": "90219875-7a7b-4d5e-d80b-310c88c02995",
+																	"fieldType": "sap.m.Select",
+																	"script": "",
+																	"customComponent": false,
+																	"request": [],
+																	"response": [],
+																	"attributes": [
+																		{
+																			"attribute": "change",
+																			"grouping": "Events",
+																			"value": "TabFiles.fireSelectionChange();",
+																			"script": "TabFiles.fireSelectionChange();",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "selectedKey",
+																			"grouping": "Properties",
+																			"value": "All",
+																			"script": "",
+																			"translation": []
+																		}
+																	],
+																	"data": [
+																		{
+																			"fieldNo": "6e8099a0-516b-4f7f-a123-60439a955031",
+																			"fieldName": "ItemFilterTimeAll",
+																			"fieldParent": "d996563b-5cfd-4a60-b6e7-f3983d72de6a",
+																			"fieldType": "sap.ui.core.Item",
+																			"script": "",
+																			"customComponent": false,
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "All",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "key",
+																					"grouping": "Properties",
+																					"value": "All",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		},
+																		{
+																			"fieldNo": "cb38b68d-0266-41a7-85cc-69ffebb36d93",
+																			"fieldName": "ItemFilterTime15",
+																			"fieldParent": "d996563b-5cfd-4a60-b6e7-f3983d72de6a",
+																			"fieldType": "sap.ui.core.Item",
+																			"script": "",
+																			"customComponent": false,
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "Last 15 Min",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "key",
+																					"grouping": "Properties",
+																					"value": "15",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		},
+																		{
+																			"fieldNo": "ddbb7ff0-06c7-4e76-b8fc-59a5a8b7faeb",
+																			"fieldName": "ItemFilterTime30",
+																			"fieldParent": "d996563b-5cfd-4a60-b6e7-f3983d72de6a",
+																			"fieldType": "sap.ui.core.Item",
+																			"script": "",
+																			"customComponent": false,
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "Last 30 Min",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "key",
+																					"grouping": "Properties",
+																					"value": "30",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		},
+																		{
+																			"fieldNo": "1825cece-e004-488b-9d9c-97366143377b",
+																			"fieldName": "ItemFilterTime60",
+																			"fieldParent": "d996563b-5cfd-4a60-b6e7-f3983d72de6a",
+																			"fieldType": "sap.ui.core.Item",
+																			"script": "",
+																			"customComponent": false,
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "Last 1 Hour",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "key",
+																					"grouping": "Properties",
+																					"value": "60",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		},
+																		{
+																			"fieldNo": "ec727f89-2ec3-459b-d2c9-3aadef763144",
+																			"fieldName": "ItemFilterTime120",
+																			"fieldParent": "d996563b-5cfd-4a60-b6e7-f3983d72de6a",
+																			"fieldType": "sap.ui.core.Item",
+																			"script": "",
+																			"customComponent": false,
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "Last 2 Hours",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "key",
+																					"grouping": "Properties",
+																					"value": "120",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		},
+																		{
+																			"fieldNo": "5830e727-c846-4d8f-d581-f482b8d2f42a",
+																			"fieldName": "ItemFilterTime180",
+																			"fieldParent": "d996563b-5cfd-4a60-b6e7-f3983d72de6a",
+																			"fieldType": "sap.ui.core.Item",
+																			"script": "",
+																			"customComponent": false,
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "Last 3 Hours",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "key",
+																					"grouping": "Properties",
+																					"value": "180",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		}
+																	]
+																},
+																{
+																	"fieldNo": "ac2492ac-ee59-40a1-a9fc-332ea4f3670e",
+																	"fieldName": "ToolbarSeparator3",
+																	"fieldParent": "90219875-7a7b-4d5e-d80b-310c88c02995",
+																	"fieldType": "sap.m.ToolbarSeparator",
 																	"script": "",
 																	"customComponent": false,
 																	"request": [],
@@ -1198,7 +1347,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "24.06.24.1448",
+	"ver": "24.06.24.1600",
 	"application": "p9_request_analyzer",
 	"title": "Request Analyzer",
 	"description": "Request Analyzer",

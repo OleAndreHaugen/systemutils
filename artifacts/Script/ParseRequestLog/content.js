@@ -25,13 +25,21 @@ try {
             log.message.request.url = log.message.request.url.split("?")[0];
         }
 
-        const path = log.message.request.host + log.message.request.url;
+        if (
+            req.query?.minutes !== "All" &&
+            !isWithinLastMinutes(log.message.request.timestamp, req.query.minutes)
+        ) {
+            return;
+        }
+
+        //const path = log.message.request.host + log.message.request.url;
+        const path = log.message.request.url;
 
         if (!topUrl[path])
             topUrl[path] = {
                 requests: 0,
                 duration: 0,
-                errors: 0
+                errors: 0,
             };
         topUrl[path].requests++;
         topUrl[path].duration = topUrl[path].duration + log.message.response.duration;
@@ -62,9 +70,9 @@ try {
         });
     }
 
-    topUrlList?.forEach(function(item){
+    topUrlList?.forEach(function (item) {
         item.avg = item.duration / item.requests;
-    })
+    });
 
     result.data = {
         topUrlList: topUrlList,
@@ -79,7 +87,14 @@ try {
     result.data = {
         error: e,
     };
-
 }
 
 complete();
+
+function isWithinLastMinutes(logtime, minutes) {
+    const timestamp = new Date(logtime).getTime();
+    const currentTime = new Date().getTime();
+    const timeDifference = currentTime - timestamp;
+    const minutesDifference = timeDifference / (1000 * 60);
+    return minutesDifference <= minutes;
+}
