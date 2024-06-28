@@ -16,6 +16,7 @@ if (selectedItem) {
 
     apiGetRequestLog(options).then(function (res) {
         modelTabTopUrl.setData(res.topUrlList);
+        modelTabUsers.setData(res.usersList);
         modelPageAnalyze.setData(res.requestInfo);
         PageAnalyze.setBusy(false);
     });

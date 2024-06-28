@@ -6,6 +6,7 @@ const fileFormatted = fileContent.split("\n").reverse();
 
 let logContent = [];
 let topUrl = {};
+let users = {};
 let reqOK = 0;
 let reqNOK = 0;
 let totReq = 0;
@@ -32,7 +33,7 @@ try {
             return;
         }
 
-        //const path = log.message.request.host + log.message.request.url;
+        // Request Path
         const path = log.message.request.url;
 
         if (!topUrl[path])
@@ -51,10 +52,24 @@ try {
             topUrl[path].errors++;
         }
 
+        // Request Users
+        if (log.message.user.username) {
+            if (!users[log.message.user.username])
+                users[log.message.user.username] = {
+                    requests: 0,
+                    duration: 0,
+                    errors: 0,
+                };
+            users[log.message.user.username].requests++;
+            users[log.message.user.username].duration =
+                users[log.message.user.username].duration + log.message.response.duration;
+        }
+
         totReq++;
         totDuration = totDuration + log.message.response.duration;
     });
 
+// Paths
     const keyValueArray = Object.entries(topUrl);
     keyValueArray.sort((a, b) => b[1] - a[1]);
     const sortedJsonObject = Object.fromEntries(keyValueArray);
@@ -74,8 +89,29 @@ try {
         item.avg = item.duration / item.requests;
     });
 
+// Users
+    const keyValueArray2 = Object.entries(users);
+    keyValueArray2.sort((a, b) => b[1] - a[1]);
+    const sortedJsonObject2 = Object.fromEntries(keyValueArray2);
+
+    const usersList = [];
+
+    for (const key in sortedJsonObject2) {
+        usersList.push({
+            username: key,
+            requests: sortedJsonObject2[key].requests,
+            duration: parseFloat(sortedJsonObject2[key].duration.toFixed(2)),
+            errors: sortedJsonObject2[key].errors,
+        });
+    }
+
+    usersList?.forEach(function (item) {
+        item.avg = item.duration / item.requests;
+    });    
+
     result.data = {
-        topUrlList: topUrlList,
+        topUrlList,
+        usersList,
         requestInfo: {
             reqOK,
             reqNOK,

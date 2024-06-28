@@ -1,4 +1,7 @@
 sap.ui.getCore().attachInit(function (startParams) {
+
+    PanStats.addContent(ToolTopUrl);
+    
     apiGetRequestFiles().then(function (res) {
         modelTabFiles.setData(res);
     });
@@ -8,6 +11,4 @@ sap.ui.getCore().attachInit(function (startParams) {
     const binding = TabFiles.getBinding("items");
     binding.sort(sorter);
 
-    // Some things need to be delayed. Run them inside a timeout
-    setTimeout(function () {}, 200);
 });
