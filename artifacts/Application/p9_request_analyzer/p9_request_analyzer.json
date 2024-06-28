@@ -742,6 +742,13 @@
 																			"value": "3",
 																			"script": "",
 																			"translation": []
+																		},
+																		{
+																			"attribute": "columnsXL",
+																			"grouping": "Properties",
+																			"value": "4",
+																			"script": "",
+																			"translation": []
 																		}
 																	],
 																	"data": [
@@ -1011,7 +1018,7 @@
 																		},
 																		{
 																			"fieldNo": "dfc3a53f-6867-4428-dea6-e8f2ed1acd88",
-																			"fieldName": "lblFilterTime1",
+																			"fieldName": "lblFilterUrlPath",
 																			"fieldParent": "04b5caba-7f61-4b1b-af95-824c1c336240",
 																			"fieldType": "sap.m.Label",
 																			"script": "",
@@ -1022,7 +1029,7 @@
 																				{
 																					"attribute": "text",
 																					"grouping": "Properties",
-																					"value": "Parameters",
+																					"value": "URL Parameters",
 																					"script": "",
 																					"translation": []
 																				}
@@ -1030,36 +1037,43 @@
 																			"data": []
 																		},
 																		{
-																			"fieldNo": "01ee374f-a7f6-416b-f343-69966a8557ab",
+																			"fieldNo": "3827fe80-7630-408b-cc32-06bf5d6e4fdc",
 																			"fieldName": "ToolTopUrlPath",
 																			"fieldParent": "04b5caba-7f61-4b1b-af95-824c1c336240",
-																			"fieldType": "sap.m.SegmentedButton",
+																			"fieldType": "sap.m.Select",
 																			"script": "",
 																			"customComponent": false,
 																			"request": [],
 																			"response": [],
 																			"attributes": [
 																				{
+																					"attribute": "change",
+																					"grouping": "Events",
+																					"value": "TabFiles.fireSelectionChange();",
+																					"script": "TabFiles.fireSelectionChange();",
+																					"translation": []
+																				},
+																				{
 																					"attribute": "selectedKey",
 																					"grouping": "Properties",
-																					"value": "with",
+																					"value": "All",
 																					"script": "",
 																					"translation": []
 																				},
 																				{
-																					"attribute": "selectionChange",
-																					"grouping": "Events",
-																					"value": "TabFiles.fireSelectionChange();",
-																					"script": "TabFiles.fireSelectionChange();",
+																					"attribute": "width",
+																					"grouping": "Properties",
+																					"value": "100%",
+																					"script": "",
 																					"translation": []
 																				}
 																			],
 																			"data": [
 																				{
-																					"fieldNo": "52a11c7d-56b8-43a3-ca7a-45ce6ed6d72d",
-																					"fieldName": "ToolTopUrlPathWith",
-																					"fieldParent": "01ee374f-a7f6-416b-f343-69966a8557ab",
-																					"fieldType": "sap.m.SegmentedButtonItem",
+																					"fieldNo": "9afc60a6-3eef-40f3-f56c-f808b4ed27ac",
+																					"fieldName": "ItemFilterPathAll",
+																					"fieldParent": "3827fe80-7630-408b-cc32-06bf5d6e4fdc",
+																					"fieldType": "sap.ui.core.Item",
 																					"script": "",
 																					"customComponent": false,
 																					"request": [],
@@ -1068,14 +1082,14 @@
 																						{
 																							"attribute": "text",
 																							"grouping": "Properties",
-																							"value": "All",
+																							"value": "Show full URL",
 																							"script": "",
 																							"translation": []
 																						},
 																						{
 																							"attribute": "key",
 																							"grouping": "Properties",
-																							"value": "with",
+																							"value": "All",
 																							"script": "",
 																							"translation": []
 																						}
@@ -1083,10 +1097,10 @@
 																					"data": []
 																				},
 																				{
-																					"fieldNo": "ae2fbc3e-c34f-40de-e53a-2a116a1cd02f",
-																					"fieldName": "ToolTopUrlPathNone",
-																					"fieldParent": "01ee374f-a7f6-416b-f343-69966a8557ab",
-																					"fieldType": "sap.m.SegmentedButtonItem",
+																					"fieldNo": "ba4452f2-2c9e-4068-ef22-f7b949c3b78e",
+																					"fieldName": "ItemFilterPathNone",
+																					"fieldParent": "3827fe80-7630-408b-cc32-06bf5d6e4fdc",
+																					"fieldType": "sap.ui.core.Item",
 																					"script": "",
 																					"customComponent": false,
 																					"request": [],
@@ -1095,7 +1109,7 @@
 																						{
 																							"attribute": "text",
 																							"grouping": "Properties",
-																							"value": "No Parameters",
+																							"value": "No Parameters in URL",
 																							"script": "",
 																							"translation": []
 																						},
@@ -1103,6 +1117,142 @@
 																							"attribute": "key",
 																							"grouping": "Properties",
 																							"value": "without",
+																							"script": "",
+																							"translation": []
+																						}
+																					],
+																					"data": []
+																				}
+																			]
+																		},
+																		{
+																			"fieldNo": "195ede50-f3b4-4681-8efe-fe4a1dfda2b0",
+																			"fieldName": "lblFilterExclude",
+																			"fieldParent": "04b5caba-7f61-4b1b-af95-824c1c336240",
+																			"fieldType": "sap.m.Label",
+																			"script": "",
+																			"customComponent": false,
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "URL Filter",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": []
+																		},
+																		{
+																			"fieldNo": "832ef72c-a16e-477e-8917-e065fd2b3ac7",
+																			"fieldName": "ToolTopExclude",
+																			"fieldParent": "04b5caba-7f61-4b1b-af95-824c1c336240",
+																			"fieldType": "sap.m.Select",
+																			"script": "",
+																			"customComponent": false,
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "change",
+																					"grouping": "Events",
+																					"value": "TabFiles.fireSelectionChange();",
+																					"script": "TabFiles.fireSelectionChange();",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "selectedKey",
+																					"grouping": "Properties",
+																					"value": "All",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "width",
+																					"grouping": "Properties",
+																					"value": "100%",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": [
+																				{
+																					"fieldNo": "9114de49-e23c-4aed-bd64-b0f6b776e7ef",
+																					"fieldName": "ItemFilterExcludeNone",
+																					"fieldParent": "832ef72c-a16e-477e-8917-e065fd2b3ac7",
+																					"fieldType": "sap.ui.core.Item",
+																					"script": "",
+																					"customComponent": false,
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "text",
+																							"grouping": "Properties",
+																							"value": "Show all URL",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "key",
+																							"grouping": "Properties",
+																							"value": "All",
+																							"script": "",
+																							"translation": []
+																						}
+																					],
+																					"data": []
+																				},
+																				{
+																					"fieldNo": "e3c970ea-47e3-4a7d-b490-3ba624f82608",
+																					"fieldName": "ItemFilterExcludeNeptune",
+																					"fieldParent": "832ef72c-a16e-477e-8917-e065fd2b3ac7",
+																					"fieldType": "sap.ui.core.Item",
+																					"script": "",
+																					"customComponent": false,
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "text",
+																							"grouping": "Properties",
+																							"value": "Exclude Neptune API",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "key",
+																							"grouping": "Properties",
+																							"value": "exclude",
+																							"script": "",
+																							"translation": []
+																						}
+																					],
+																					"data": []
+																				},
+																				{
+																					"fieldNo": "8df63905-e728-49b9-b4df-af4d45dc55e6",
+																					"fieldName": "ItemFilterOnlyNeptune",
+																					"fieldParent": "832ef72c-a16e-477e-8917-e065fd2b3ac7",
+																					"fieldType": "sap.ui.core.Item",
+																					"script": "",
+																					"customComponent": false,
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "text",
+																							"grouping": "Properties",
+																							"value": "Only Show Neptune API",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "key",
+																							"grouping": "Properties",
+																							"value": "include",
 																							"script": "",
 																							"translation": []
 																						}
@@ -1603,7 +1753,7 @@
 																				{
 																					"attribute": "sortProperty",
 																					"grouping": "Properties",
-																					"value": "url",
+																					"value": "username",
 																					"script": "",
 																					"translation": []
 																				},
@@ -2015,7 +2165,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "24.06.28.0756",
+	"ver": "24.06.28.1009",
 	"application": "p9_request_analyzer",
 	"title": "Request Analyzer",
 	"description": "Request Analyzer",

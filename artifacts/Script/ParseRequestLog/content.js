@@ -4,6 +4,26 @@ const fileName = "./log/requests/" + req.query.fileName;
 const fileContent = fs.readFileSync(fileName, "utf8");
 const fileFormatted = fileContent.split("\n").reverse();
 
+const neptunePaths = [
+    "/api/functions",
+    "/public/icons",
+    "/public/openui5",
+    "/public/webix",
+    "/views/",
+    "/api/formatter",
+    "/adaptivedesigner",
+    "/appdesigner",
+    "/scripteditor",
+    "/cockpit",
+    "/api/user",
+    "/api/scripteditor/",
+    "/public/themes",
+    "/user/logon",
+    "/public/images",
+    "/sm/",
+    "/favicon.ico",
+];
+
 let logContent = [];
 let topUrl = {};
 let users = {};
@@ -22,15 +42,31 @@ try {
             log = JSON.parse(element);
         } catch (e) {}
 
+        // Filter - Parameters
         if (req.query.pathing === "without") {
             log.message.request.url = log.message.request.url.split("?")[0];
         }
 
+        // Filter - Period
         if (
             req.query?.minutes !== "All" &&
             !isWithinLastMinutes(log.message.request.timestamp, req.query.minutes)
         ) {
             return;
+        }
+
+        // Filter - Exclude Neptune
+        if (req.query.show === "exclude") {
+            if (neptunePaths.some((value) => log.message.request.url.includes(value))) {
+                return;
+            }
+        }
+
+        // Filter - Show Only Neptune
+        if (req.query.show === "include") {
+            if (!neptunePaths.some((value) => log.message.request.url.includes(value))) {
+                return;
+            }
         }
 
         // Request Path
@@ -69,48 +105,11 @@ try {
         totDuration = totDuration + log.message.response.duration;
     });
 
-// Paths
-    const keyValueArray = Object.entries(topUrl);
-    keyValueArray.sort((a, b) => b[1] - a[1]);
-    const sortedJsonObject = Object.fromEntries(keyValueArray);
-
-    const topUrlList = [];
-
-    for (const key in sortedJsonObject) {
-        topUrlList.push({
-            url: key,
-            requests: sortedJsonObject[key].requests,
-            duration: parseFloat(sortedJsonObject[key].duration.toFixed(2)),
-            errors: sortedJsonObject[key].errors,
-        });
-    }
-
-    topUrlList?.forEach(function (item) {
-        item.avg = item.duration / item.requests;
-    });
-
-// Users
-    const keyValueArray2 = Object.entries(users);
-    keyValueArray2.sort((a, b) => b[1] - a[1]);
-    const sortedJsonObject2 = Object.fromEntries(keyValueArray2);
-
-    const usersList = [];
-
-    for (const key in sortedJsonObject2) {
-        usersList.push({
-            username: key,
-            requests: sortedJsonObject2[key].requests,
-            duration: parseFloat(sortedJsonObject2[key].duration.toFixed(2)),
-            errors: sortedJsonObject2[key].errors,
-        });
-    }
-
-    usersList?.forEach(function (item) {
-        item.avg = item.duration / item.requests;
-    });    
+    const urlList = convertToList(topUrl, "url");
+    const usersList = convertToList(users, "username");
 
     result.data = {
-        topUrlList,
+        urlList,
         usersList,
         requestInfo: {
             reqOK,
@@ -133,4 +132,30 @@ function isWithinLastMinutes(logtime, minutes) {
     const timeDifference = currentTime - timestamp;
     const minutesDifference = timeDifference / (1000 * 60);
     return minutesDifference <= minutes;
+}
+
+function convertToList(objectKeys, keyField) {
+    const keyValueArray = Object.entries(objectKeys);
+    keyValueArray.sort((a, b) => b[1] - a[1]);
+    const sortedJsonObject = Object.fromEntries(keyValueArray);
+
+    const Items = [];
+
+    for (const key in sortedJsonObject) {
+        let rec = {
+            requests: sortedJsonObject[key].requests,
+            duration: parseFloat(sortedJsonObject[key].duration.toFixed(2)),
+            errors: sortedJsonObject[key].errors,
+        };
+
+        rec[keyField] = key;
+
+        Items.push(rec);
+    }
+
+    Items?.forEach(function (item) {
+        item.avg = item.duration / item.requests;
+    });
+
+    return Items;
 }

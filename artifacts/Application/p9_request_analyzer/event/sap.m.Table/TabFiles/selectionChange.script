@@ -11,11 +11,12 @@ if (selectedItem) {
             fileName: data.name,
             pathing: ToolTopUrlPath.getSelectedKey(),
             minutes: ToolTopUrlFilterTime.getSelectedKey(),
+            show: ToolTopExclude.getSelectedKey(),
         },
     };
 
     apiGetRequestLog(options).then(function (res) {
-        modelTabTopUrl.setData(res.topUrlList);
+        modelTabTopUrl.setData(res.urlList);
         modelTabUsers.setData(res.usersList);
         modelPageAnalyze.setData(res.requestInfo);
         PageAnalyze.setBusy(false);

@@ -14,7 +14,7 @@
 	"entitySets": [],
 	"apis": [],
 	"name": "ParseRequestLog",
-	"ver": "24.06.28.0750",
+	"ver": "24.06.28.1008",
 	"description": null,
 	"folder": "",
 	"content": "file:///content.js",
